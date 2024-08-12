@@ -1,0 +1,15 @@
+Test Accuracy: 0.7554
+Test AUC: 0.8235
+Test Precision: 0.6724
+Test Recall: 0.6556
+Test F1 Score: 0.6639
+
+Classification Report:
+              precision    recall  f1-score   support
+
+          HP       0.80      0.81      0.81       617
+         SSA       0.67      0.66      0.66       360
+
+    accuracy                           0.76       977
+   macro avg       0.74      0.73      0.74       977
+weighted avg       0.75      0.76      0.75       977
