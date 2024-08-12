@@ -15,10 +15,11 @@ After downloading the data, save all the images inside the 'data/images' folder.
 Please run the code `python data_dist_visual.py` or run the following Jupyter Notebook files:  
 - **`data_dist_plt_bar_visual.ipynb`**: For displaying the data distribution using `plt.bar` (from `matplotlib`)  
 - **`data_dist_sns_visual.ipynb`**: For displaying the data distribution using `sns` (`seaborn`)
-
-The distribution plots will be saved in the `dataset_plots` folder.
-![Class Imbalnce in the dataset](dataset_plots/plt_dataset_plots/percentage_distribution_of_class_labels.png)
-
+  
+The distribution plots will be saved in the `dataset_plots` folder. Class imbalance in the dataset is as follows:
+<div align="center">
+  <img src="dataset_plots/plt_dataset_plots/percentage_distribution_of_class_labels.png" alt="Class Imbalance in the dataset" width="500"/>
+</div>
 
 
 ## --- MHIST Classification Using ResNet Model ---
@@ -71,12 +72,15 @@ To evaluate the performance of the trained model on the test dataset, use the fo
 ```bash
 python test.py
 ```
-Some examples from the the trained model's test results have been saved in the `test_eval` folder.   
-![Test Result from ResNet18 Model](test_eval/resnet18-pre-trained-5layers-aug-oversample/test_examples/epoch_16/best_example_4_MHIST_bin.png.png)
+Some examples from the trained model's test results have been saved in the `test_eval` folder. Test Result from ResNet18 Model:
+<div align="center">
+  <img src="test_eval/resnet18-pre-trained-5layers-aug-oversample/test_examples/epoch_16/best_example_4_MHIST_bin.png.png" alt="Test Result from ResNet18 Model" width="300"/>
+</div>
 
 With confusion metrics:
-
-![metrics image](test_eval/resnet18-pre-trained-5layers-aug-oversample/test_metrics/epoch_16/test_confusion_matrix.png)`
+<div align="center">
+  <img src="test_eval/resnet18-pre-trained-5layers-aug-oversample/test_metrics/epoch_16/test_confusion_matrix.png" alt="metrics image" width="400"/>
+</div>
 
 ### Trained Model Comparison on the Test Set
 
