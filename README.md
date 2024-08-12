@@ -59,6 +59,8 @@ To resume training from a previous checkpoint, set resume: True in the config.ya
 ```bash
 resume: True
 ```
+Some examples from the trained model's validation results after training have been saved in the `eval_results` folder. \
+Trained models, along with their learning curves, as well as the last and best checkpoints, will be saved in the `trained_models` folder.
 
 
 ### Running the Testing
@@ -68,6 +70,7 @@ To evaluate the performance of the trained model on the test dataset, use the fo
 ```bash
 python test.py
 ```
+Some examples from the the trained model's test results have been saved in the `test_eval` folder.
 
 ### Running GradCam to Generate Heatmaps
 To generate GradCam heatmaps, which visually explain the model's predictions by highlighting important regions in the input images, use the following command:
@@ -75,3 +78,4 @@ To generate GradCam heatmaps, which visually explain the model's predictions by 
 ```bash
 python test_gradcam.py
 ```
+Some examples of the trained model's heatmap results have been saved in the `gradcam_images` folder.
