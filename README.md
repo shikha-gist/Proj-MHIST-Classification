@@ -95,9 +95,10 @@ With confusion metrics:
 | ResNet-34 (M7)  | Yes         | 5                | 13115394             | 88.93 | 82.19    | 79.06     | 70.28  | 74.41    |
 | ResNet-34 (M8)  | No         | All                | 21285698              | 83.9 | 76.46   | 73.38    | 56.67  | 63.95   |
 | ResNet-34 (M9)  | Yes         | All                | 21285698              | 89.58 | 82.60   | 79.32    | 71.39  | 75.15    |
-| ViT-Base (M10)   | Yes         | 2                | 7833602              | 89.75	| 81.99	| 73.96	| 78.89	| 76.34    |
-| ViT-Base (M11)   | Yes         | 3                | 14921474             | 90.36	|81.78	|77.58	|71.11	|74.2|
-| **ViT-Base (M12)**   | **Yes**         | **All**             |  **85800194** | **92.02** |  **85.47** | **78.39** | **83.61** | **80.91** |
+| ViT-Base (M10)   | Yes         | 2                | 7833602              | 85.34 | 79.22 | 74.01 | 67.22 | 70.45 |
+| ViT-Base (M11)   | Yes         | 2                | 7833602              | 89.75	| 81.99	| 73.96	| 78.89	| 76.34    |
+| ViT-Base (M12)   | Yes         | 3                | 14921474             | 90.36	|81.78	|77.58	|71.11	|74.2|
+| **ViT-Base (M13)**   | **Yes**         | **All**             |  **85800194** | **92.02** |  **85.47** | **78.39** | **83.61** | **80.91** |
 
 **Model Descriptions:**
 
@@ -105,8 +106,9 @@ With confusion metrics:
 - **M2**: Pre-trained ResNet-18 model, with only the last layer fine-tuned, addressing data imbalance.
 - **M3**: Non-pre-trained ResNet-18 model, with all layers trainable, addressing data imbalance.
 - **M4 (Best Accuracy Model )**: Pre-trained ResNet-18 model, with the last 5 layers fine-tuned, addressing data imbalance.
-- **M12 (Best AUC Model )**: Pre-trained ViT-Base model, with all layers fine-tuned, addressing data imbalance.
-- **M5-M12*: Similar to M4, but with different architectures and varying numbers of trainable layers, all addressing data imbalance.\
+- **M10**: Base pre-trained Vit-base model, with the last 2 layers fine-tuned, without addressing data imbalance.
+- **M13 (Best AUC Model )**: Pre-trained ViT-Base model, with all layers fine-tuned, addressing data imbalance.
+- **M5-M12 (not M10)**: Similar to M4, but with different architectures and varying numbers of trainable layers, all addressing data imbalance.\
   \
 All models that address data imbalance utilize the same data augmentation and oversampling techniques.
 
