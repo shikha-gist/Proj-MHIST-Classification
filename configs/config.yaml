@@ -1,7 +1,7 @@
 data:
   annotations_file: "data/annotations.csv"  # Path to the CSV file containing image annotations
   images_dir: "data/images"  # Directory containing all the images (including training and testing)
-  model_name: "resnet18-pre-trained-5layers-accuracy-step10-lr0.001-aug-oversample"  # Name for the experiment-model (used for saving checkpoints, evaluation and testing)
+  model_name: "resnet18-pre-trained-5layers-aug-oversample"  # Name for the experiment-model (used for saving checkpoints, evaluation and testing)
   model_save_dir: "trained_models"  # Directory where trained models will be saved
   eval_save_dir: "eval_results"  # Directory where evaluation results will be saved after training completes
   test_dir: "test_results"  # Directory for saving test results
