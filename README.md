@@ -70,7 +70,8 @@ To evaluate the performance of the trained model on the test dataset, use the fo
 ```bash
 python test.py
 ```
-Some examples from the the trained model's test results have been saved in the `test_eval` folder.
+Some examples from the the trained model's test results have been saved in the `test_eval` folder.   `![Test Result from ResNet18 Model](test_eval/resnet18-pre-trained-5layers-aug-oversample/test_examples/epoch_16/best_example_6_MHIST_dib.png.png)` 
+With confusion `![metrics image](test_eval/resnet18-pre-trained-5layers-aug-oversample/test_metrics/epoch_16/test_confusion_matrix.png)`
 
 ### Running GradCam to Generate Heatmaps
 To generate GradCam heatmaps, which visually explain the model's predictions by highlighting important regions in the input images, use the following command:
