@@ -1,0 +1,40 @@
+data:
+  annotations_file: "data/annotations.csv"  # Path to the CSV file containing image annotations
+  images_dir: "data/images"  # Directory containing all the images (including training and testing)
+  model_name: "resnet18-pre-trained-5layers-accuracy-step10-lr0.001-aug-oversample"  # Name for the experiment-model (used for saving checkpoints, evaluation and testing)
+  model_save_dir: "trained_models"  # Directory where trained models will be saved
+  eval_save_dir: "eval_results"  # Directory where evaluation results will be saved after training completes
+  test_dir: "test_results"  # Directory for saving test results
+  log_dir: "logs"  # Directory for saving training logs
+  train_val_split: 0.8  # Percentage of data to be used for training (rest for validation)
+  augmentation: true  # Whether to apply data augmentation during training (this will be randomly applied to the images, but does not increase the number of training samples)
+  class_balancing: true  # Whether to apply class weights or sampling for class balancing
+  balance_dataset: false  # Whether to balance the dataset using augmentation techniques (this will increase the number of samples for training with the augemented data)
+  augmented_data_dir: "data/augmented_images"  # Directory to save augmented images (if augmentation is enabled, augmentented images will be saved here)
+
+model:
+  architecture: "resnet18"  # Model architecture to use (e.g., resnet18, resnet34, and vit)
+  pretrained: true  # Whether to use a pretrained model (e.g., pretrained on ImageNet)
+  fine_tune_layers: 5 # Number of layers to fine-tune after loading the pre-trained model (0 for last layer only, -1 for full model)
+  num_classes: 2  # Number of output classes (e.g., binary classification)
+  variant: "base"  # Variant of the ViT model architecture (used for ViT: base, large, huge, custom-vit)
+  lr: 0.001  # Learning rate for training
+  weight_decay: 0.001  # Weight decay (L2 regularization) factor
+  step_size: 10  # Step size for learning rate scheduler (after how many epochs to reduce the learning rate)
+  gamma: 0.1  # Learning rate decay factor (to multiply the learning rate by)
+  num_epochs: 100  # Number of training epochs
+  batch_size: 32  # Batch size for training
+  use_class_weights: false  # Whether to use class weights in the loss function to handle class imbalance
+  oversample_minority_class: true  # Whether to oversample the minority class during training
+  monitor_metric: "accuracy"  # Metric to monitor during training (e.g., accuracy, AUC)
+  early_stopping: true  # Whether to use early stopping to prevent overfitting based on val-AUC or val-accuracy
+  patience: 11  # Number of epochs to wait for improvement before stopping (used with early stopping)
+  hidden_size: 768  # Hidden size of the transformer model (ViT-specific) custom-ViT
+  num_attention_heads: 13  # Number of attention heads in the transformer, custom-ViT (ViT-specific)
+  intermediate_size: 3072  # Size of the intermediate (feed-forward) layers in the transformer, custom-ViT (ViT-specific)
+  num_hidden_layers: 12  # Number of hidden layers in the transformer model, custom-ViT (ViT-specific)
+
+training:
+  resume: False  # Whether to resume training from the last saved checkpoint
+
+random_seed: 42  # Random seed for reproducibility
