@@ -97,7 +97,8 @@ With confusion metrics:
 - **M2**: Pre-trained ResNet-18 model, with only the last layer fine-tuned, addressing data imbalance.
 - **M3**: Non-pre-trained ResNet-18 model, with all layers trainable, addressing data imbalance.
 - **M4 (Best Model)**: Pre-trained ResNet-18 model, with the last 5 layers fine-tuned, addressing data imbalance.
-- **M5-M8**: Similar to M4, but with different architectures and varying numbers of trainable layers, all addressing data imbalance.
+- **M5-M8**: Similar to M4, but with different architectures and varying numbers of trainable layers, all addressing data imbalance.\
+  \
 All models that address data imbalance utilize the same data augmentation and oversampling techniques.
 
 
