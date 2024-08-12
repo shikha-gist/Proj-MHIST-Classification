@@ -84,3 +84,6 @@ To generate GradCam heatmaps, which visually explain the model's predictions by 
 python test_gradcam.py
 ```
 Some examples of the trained model's heatmap results have been saved in the `gradcam_images` folder.
+
+![HeatMap from the ResNet18 Trained mode](/gradcam_images/resnet18-pre-trained-5layers-aug-oversample/MHIST_aay.png_gradcam.png)
+![HeatMap from the ViT-Base Trained mode](gradcam_images/vit-pre-trained-3layers-aug-oversample/MHIST_abx.png_gradcam.png)`
