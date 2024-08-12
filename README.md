@@ -17,6 +17,7 @@ Please run the code `python data_dist_visual.py` or run the following Jupyter No
 - **`data_dist_sns_visual.ipynb`**: For displaying the data distribution using `sns` (`seaborn`)
 
 The distribution plots will be saved in the `dataset_plots` folder.
+![Class Imbalnce in the dataset](dataset_plots/plt_dataset_plots/percentage_distribution_of_class_labels.png)
 
 
 
