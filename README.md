@@ -86,18 +86,22 @@ With confusion metrics:
 | ResNet-18 (M2)  | Yes         | 1                | 1026                 | 84.14 | 75.33    | 63.74     | 76.67  | 69.61    |
 | ResNet-18 (M3)  | No          | All              | 11177538             | 86.94 | 79.22    | 70.39     | 75.28  | 72.75    |
 | **ResNet-18 (M4)**  | **Yes**  | **5**            | **9575426**          | **91.49** | **85.57** | **81.2** | **79.17** | **80.17** |
-| ResNet-34 (M5)  | Yes         | 4                | 9442306              | 87.51 | 79.63    | 72.55     | 71.94  | 72.25    |
-| ResNet-34 (M6)  | Yes         | 5                | 13115394             | 88.93 | 82.19    | 79.06     | 70.28  | 74.41    |
-| ViT-Base (M7)   | Yes         | 2                | 7833602              | 82.54 | 74.31    | 62.76     | 74.44  | 68.11    |
-| ViT-Base (M8)   | Yes         | 3                | 14921474             | 82.35 | 75.54    | 67.24     | 65.56  | 66.39    |
+| **ResNet-18 (M5)**  | **Yes**  | **All**            | **11177538**          | **92.0** | **85.26** | **80.0** | **80.0** | **80.0** |
+| ResNet-34 (M6)  | Yes         | 4                | 9442306              | 87.51 | 79.63    | 72.55     | 71.94  | 72.25    |
+| ResNet-34 (M7)  | Yes         | 5                | 13115394             | 88.93 | 82.19    | 79.06     | 70.28  | 74.41    |
+| ResNet-34 (M8)  | No         | All                | 21285698              | 83.9 | 76.46   | 73.38    | 56.67  | 63.95   |
+| ResNet-34 (M9)  | Yes         | All                | 21285698              | 89.58 | 82.60   | 79.32    | 71.39  | 75.15    |
+| ViT-Base (M10)   | Yes         | 2                | 7833602              | 82.54 | 74.31    | 62.76     | 74.44  | 68.11    |
+| ViT-Base (M11)   | Yes         | 3                | 14921474             | 82.35 | 75.54    | 67.24     | 65.56  | 66.39    |
 
 **Model Descriptions:**
 
 - **M1**: Base pre-trained ResNet-18 model, with only the last layer fine-tuned, without addressing data imbalance.
 - **M2**: Pre-trained ResNet-18 model, with only the last layer fine-tuned, addressing data imbalance.
 - **M3**: Non-pre-trained ResNet-18 model, with all layers trainable, addressing data imbalance.
-- **M4 (Best Model)**: Pre-trained ResNet-18 model, with the last 5 layers fine-tuned, addressing data imbalance.
-- **M5-M8**: Similar to M4, but with different architectures and varying numbers of trainable layers, all addressing data imbalance.\
+- **M4 (Best Accuracy Model )**: Pre-trained ResNet-18 model, with the last 5 layers fine-tuned, addressing data imbalance.
+- **M5 (Best AUC Model )**: Pre-trained ResNet-18 model, with all layers fine-tuned, addressing data imbalance.
+- **M6-M11*: Similar to M4, but with different architectures and varying numbers of trainable layers, all addressing data imbalance.\
   \
 All models that address data imbalance utilize the same data augmentation and oversampling techniques.
 
